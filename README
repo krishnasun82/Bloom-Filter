@@ -1,0 +1,10 @@
+Bloom filter code expanded over the recipe posted by Raymond Hettinger in ActiveState site: http://bit.ly/bloom_filter.
+
+It requires the number of bits, number of probes, and a yielding hash function as shown in my fork of the recipe: http://bit.ly/kN3Q2w. (reproduced here for convenience)
+
+def get_probes(bfilter, key):
+    hasher = Random(key).randrange
+    for _ in range(bfilter.num_probes):
+        array_index = hasher(len(bfilter.arr))
+        bit_index = hasher(32)
+        yield array_index, 1 << bit_index
