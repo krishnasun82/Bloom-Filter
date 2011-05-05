@@ -1,6 +1,6 @@
 Bloom filter code expanded over the recipe posted by Raymond Hettinger in ActiveState site: http://bit.ly/bloom_filter.
 
-It requires the number of bits, number of probes, and a yielding hash function as shown in my fork of the recipe: http://bit.ly/kN3Q2w. (reproduced here for convenience)
+It requires the number of bits, number of probes, and a yielding hash function as shown in my fork of the recipe: http://code.activestate.com/recipes/577686/ (reproduced here for convenience)
 
 def get_probes(bfilter, key):
     hasher = Random(key).randrange
