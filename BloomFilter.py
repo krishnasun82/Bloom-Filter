@@ -1,9 +1,9 @@
 from array import array
 
 class BloomFilter:
-    # http://en.wikipedia.org/wiki/Bloom_filter
-    # http://bit.ly/bloom_filter
-    # http://code.activestate.com/recipes/577686/
+    # http://en.wikipedia.org/wiki/Bloom_filter (Ack.: Wikipedia)
+    # http://bit.ly/bloom_filter (Ack.: Raymond Hettinger)
+    # http://code.activestate.com/recipes/577686/ (me)
 
     def __init__(self, num_bits, num_probes, probe_func):
         self.num_bits= num_bits
